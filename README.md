@@ -41,11 +41,42 @@ Link to your notebook: [`Bridge_Regression.ipynb`](Bridge_Regression.ipynb)
   - Compared predictor coefficients and interpreted results
   - Summarized key insights and project conclusions
 
-- ✅ Final results & metrics
+## 📈 Final Results & Conclusion
+
+- The regression model explains approximately **46%** of the variance in bridge condition (**R² = 0.456**).  
+  This indicates that the selected predictor variables can **fairly predict bridge condition**, though there's still room for improvement.
+
+### 🔢 Regression Coefficients (Key Insights)
+
+| Predictor             | Coefficient (β)    | Interpretation                                                                 |
+|-----------------------|--------------------|---------------------------------------------------------------------------------|
+| **Age**               | -0.0485            | For every 1-year increase in age, bridge condition decreases by ~4.8%          |
+| **Average Use**       | -7.97×10⁻⁷         | Negligible impact — not a significant predictor                                |
+| **Percent Trucks**    | 0.0047             | Very low impact — minimal contribution to prediction                           |
+| **Material: Other**   | +0.3539            | 35% better condition than concrete (reference category)                         |
+| **Material: Steel**   | -1.376             | 1.3% worse condition than concrete                                              |
+| **Material: Timber**  | -3.197             | 3.3% worse condition than concrete                                              |
+| **Design: Other**     | +0.011             | Almost no difference from beam design (reference category)                     |
+| **Design: Slab**      | -0.082             | Slightly worse than beam design                                                |
+
+### 🧠 Key Observations
+
+- **Age** is the most influential predictor of bridge condition — older bridges tend to be in worse condition.
+- **Traffic volume (average use)** and **percent trucks** have **minimal effect** on condition — likely not important predictors.
+- **Material type** affects condition significantly:
+  - Bridges made of **Timber** or **Steel** tend to be in **worse condition** than those made of Concrete.
+- **Design type** has **little to no influence** on condition, based on the model coefficients.
 
 ## 🎯 Results & Conclusion
-The proposed variables can predict the bridge condition fairly well approximately close to 50% .
+- The model demonstrates that **structural age and material** are the strongest predictors of bridge condition.
+- While the model doesn't explain all variability, it provides meaningful insights that can assist in **infrastructure risk assessment**.
+- Future improvements may include:
+  - Including more variables (e.g., climate, maintenance history)
+  - Using non-linear models (e.g., Random Forests or Gradient Boosting)
+  - Segmenting by bridge type or region for deeper insights
 
-To be precise R2 being 0.456, proportion of the variance is 46% for dependent variable i.e the bridge condition which is predicted by the independent variables in the regression model
+## 🛠️ Tools Used
 
-From the comparison of coefficients we conclude that the proposed variable Age has the maximum influence on the target variable when compared to other predictors with a value of 64 versus 7.8 for percent trucks predictor variable.
+Python
+Pandas, NumPy
+Matplotlib, Seaborn
