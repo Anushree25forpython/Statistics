@@ -29,7 +29,7 @@ To understand how well the proposed variables can predict the condition of a bri
 
 ## 📓 Notebook
 
-👉 [`Bridge_Regression.ipynb`](Bridge_Regression.ipynb)
+👉 [`Bridge-condition-egression.ipynb`](Bridge-condition-regression.ipynb)
 
 ---
 
